@@ -3,7 +3,7 @@
 
 A .NET Core 6.0 LinkTree project, which users can register, login, add links, update and delete links.
 
-<img width="864" alt="image" src="https:https://raw.githubusercontent.com/dostundegil/LinkTree/master/LinkTree/ScreenShots/gif.gif">
+<img width="864" alt="image" src="https://raw.githubusercontent.com/dostundegil/LinkTree/master/LinkTree/ScreenShots/gif.gif">
 
 <!-- TABLE OF CONTENTS -->
 <details>
