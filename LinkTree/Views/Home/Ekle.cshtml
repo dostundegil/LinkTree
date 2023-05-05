@@ -1,0 +1,36 @@
+﻿@model User
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ekle</title>
+</head>
+<body>
+    <form class="form-group" method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Ekle">
+        <table>
+            <label>Kullanıcı Adı</label>
+            <br />
+            <br />
+            <input type="text" asp-for="UserName">
+            <br />
+            <br />
+            <label>Mail</label>
+            <br />
+            <br />
+            <input type="text" asp-for="UserMail">
+            <br />
+            <br />
+            <label>Reim</label>
+            <br />
+            <input type="file" asp-for="UserAvatar"/>
+            <br />
+            <button type="submit">Ekle</button>
+        </table>
+    </form>
+</body>
+</html>

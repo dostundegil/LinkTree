@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Link>
+@{
+    ViewData["Title"] = "EditLinks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+    <h1 class="text-light">Linkleri Düzenle</h1>
+</div>
+<a id="profilePicture" href="#popup">
+    <img src="https://link-tree-bucket.s3.us-west-2.amazonaws.com/@ViewBag.avatar" alt="Profile Picture">
+</a>
+
+
+<div id="userName">
+    @@@ViewBag.username
+</div>
+
+<br />
+<div class="container mt-5">
+    <div class="d-flex align-items-center justify-content-center w-100">
+        <table class="table table-bordered table-dark">
+            <tr>
+                <th>Link Adı</th>
+                <th>Güncelle</th>
+                <th>Sil</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>@item.LinkTitle</td>
+                    <td> <a href="/Profile/UpdateLink/@item.LinkID" class="btn btn-outline-warning">Güncelle</a></td>
+                    <td> <a href="/Profile/DeleteLink/@item.LinkID" class="btn btn-outline-danger">Sil</a></td>
+
+                </tr>
+            }
+
+            
+        </table>
+    </div>
+    <a href="/Profile/Index/" class="btn btn-light ml-">Ana Sayfaya Dön</a>
+</div>

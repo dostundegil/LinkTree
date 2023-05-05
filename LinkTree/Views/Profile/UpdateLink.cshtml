@@ -1,0 +1,27 @@
+﻿@model Link
+@{
+    ViewData["Title"] = "UpdateLink";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex align-items-middle justify-content-center">
+    <h1 class="text-light">Link Güncelle</h1>
+</div>
+<div class="container w-100 d-flex align-items-middle justify-content-center">
+
+    <br />
+    <form method="post">
+        <input type="hidden" asp-for="LinkID" />
+        <div class="form-group">
+            <label class="text-light" for="exampleInputEmail1">Link Adı</label>
+            <input type="text" asp-for="LinkTitle" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Başlık">
+        </div>
+        <div class="form-group">
+            <label class="text-light" for="exampleInputEmail1">Link URL</label>
+            <input type="text" asp-for="LinkUrl" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="URL">
+        </div>
+        <button type="submit" class="btn btn-primary">Güncelle</button>
+        <a href="/Profile/EditLinks/" class="btn btn-light ml-5">Vazgeç</a>
+    </form>
+</div>
+

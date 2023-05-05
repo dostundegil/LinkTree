@@ -1,0 +1,31 @@
+﻿@model UserEditViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="text-center">
+    <h1 class="text-light">Tekrar Hoşgeldin @@@Html.DisplayTextFor(x=>x.Username)</h1>
+</div>
+<a id="profilePicture" href="#popup">
+    <img src="https://link-tree-bucket.s3.us-west-2.amazonaws.com/@ViewBag.avatar" alt="Profile Picture">
+</a>
+
+
+<div id="userName">
+    @@@Html.DisplayTextFor(x=>x.Username)
+</div>
+
+<div id="links">
+    <a class="link" href="/Profile/SeeProfile/">
+        <i class="fas fa-eye">&nbsp;</i>   Profilimi gör
+    </a>
+    <a class="link" href="/Profile/Settings/">
+        <i class="	fa fa-gear">&nbsp;</i>    Profili Düzenle
+    </a>
+    <a class="link" href="/Profile/AddLink/">
+        <i class="fas fa-plus text-success">&nbsp;</i>    Yeni Link Ekle
+    </a>
+    <a class="link" href="/Profile/EditLinks/">
+        <i class="	fa fa-gear">&nbsp;</i>    Linkleri Düzenle
+    </a>
+</div>

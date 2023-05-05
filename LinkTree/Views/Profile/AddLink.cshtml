@@ -1,0 +1,24 @@
+﻿@model Link
+@{
+    ViewData["Title"] = "AddLink";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="d-flex align-items-middle justify-content-center">
+    <h1 class="text-light">Link Ekle</h1>
+</div>
+<div class="container w-100 d-flex align-items-middle justify-content-center">
+
+    <br />
+    <form method="post">
+        <div class="form-group">
+            <label class="text-light" for="exampleInputEmail1">Link Adı</label>
+            <input type="text" asp-for="LinkTitle" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Github">
+        </div>
+        <div class="form-group">
+            <label class="text-light" for="exampleInputEmail1">Link URL</label>
+            <input type="text" asp-for="LinkUrl" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="www.github.com">
+        </div>
+        <button type="submit" class="btn btn-primary">Ekle</button>
+        <a href="/Profile/Index/" class="btn btn-light ml-2">Vazgeç</a>
+    </form>
+</div>

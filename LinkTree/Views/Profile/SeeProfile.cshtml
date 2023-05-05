@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Link>
+@{
+    ViewData["Title"] = "SeeProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<a id="profilePicture" href="#popup">
+    <img src="https://link-tree-bucket.s3.us-west-2.amazonaws.com/@ViewBag.avatar" alt="Profile Picture">
+</a>
+
+
+<div id="userName">
+    @ViewBag.username
+</div>
+
+
+
+<div id="links">
+    @foreach (var item in Model)
+    {
+        <a class="link" href="@item.LinkUrl" target="_blank">
+            <i class="">&nbsp;</i>@item.LinkTitle
+        </a>
+    }
+    <a class="link" href="/Profile/Index/">
+        <i class="	fa fa-gear">&nbsp;</i>    Ayarlar
+    </a>
+</div>
+
